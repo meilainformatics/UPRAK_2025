@@ -2,7 +2,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     let mbti = document.getElementById('mbti').value;
-    let age = document.getElementById('age').value;
+    let age = document.getElementById('age_rating').value;
     let mood = document.getElementById('mood').value;
     let genre = document.getElementById('genre').value.toLowerCase();
 
@@ -1562,9 +1562,9 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 
 
 
-    let moodRecommendation = `Dengan mood Anda yang "${mood}", kami rekomendasikan: `;
+    let moodRecommendation = `Dengan mood Anda yang "${mood}", kami rekomendasikan: "${img}" `;
     
-    if (movies[genre]) {
+    if (title[genre]) {
         let genreRecommendation = `Genre ${genre.charAt(0).toUpperCase() + genre.slice(1)}: ` + movies[genre].join(', ');
         return moodRecommendation + genreRecommendation;
     } else {
