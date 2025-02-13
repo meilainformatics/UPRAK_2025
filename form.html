@@ -30,8 +30,6 @@
                 <option value="esfp">ESFP</option>
             </select>
 
-            <label for="age">Umur:</label>
-            <input type="number" id="age" required>
 
             <label for="mood">Pilih Mood Anda:</label>
             <select id="mood" required>
@@ -42,8 +40,17 @@
                 <option value="calm">Tenang</option>
             </select>
 
+            <label for="age">Umur:</label>
+            <input type="number" id="age" required>
+                <option value="">Pilih Mood</option>
+                <option value="SU">anak anak</option>
+                <option value=">= 13 && age <= 17 , "SU">remaja</option>
+                <option value=">=17">dewasa</option>
+            </select>
+
+
             <label for="genre">Genre Film Favorit:</label>
-            <input type="text" id="genre" required placeholder="Misal: Aksi, Drama, Komedi">
+            <input type="text" id="genre" required placeholder="Misal: Action, Drama, Comedy">
 
             <button type="submit">Dapatkan Rekomendasi</button>
         </form>
